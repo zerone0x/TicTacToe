@@ -112,9 +112,14 @@ function createPlayer(name){
         console.log('ai move: ' + x + ' ' + y);
         res =checkwin(board);
         if(res == true){
+            if (color === 'x'){
+                colv = 'o';
+            } else {
+                colv = 'x';
+            }
             console.log(this.name +' win');
             result = document.querySelector('#winner');
-            result.innerHTML = this.name + ' win';
+            result.innerHTML = colv + ' win';
         }
     }
 
